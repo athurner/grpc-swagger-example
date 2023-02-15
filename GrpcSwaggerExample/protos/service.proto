@@ -1,0 +1,21 @@
+syntax = "proto3";
+option csharp_namespace = "Example.Service";
+package service.v1;
+
+import "google/api/annotations.proto";
+
+service GrpcService {
+  rpc GetItem(GetItemRequest) returns (GetItemResponse){
+    option (google.api.http) = {
+      get: "/Service/GetItem"
+    };
+  };
+}
+
+message GetItemRequest {
+  string item_id = 1;
+}
+
+message GetItemResponse {
+  string item_id = 1;
+}
