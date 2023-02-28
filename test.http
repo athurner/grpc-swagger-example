@@ -1,0 +1,13 @@
+### Sample GetItem
+GET http://localhost:5045/Service/GetItem?item_id=test HTTP/1.1
+
+### Sample GetItemRouting
+GET http://localhost:5045/Service/GetItem/test2 HTTP/1.1
+
+### Sample Post
+POST http://localhost:5045/Service/PostItem HTTP/1.1
+content-type: application/json
+
+{
+    "itemId": "post_test"
+}

@@ -9,4 +9,14 @@ public class Service : GrpcService.GrpcServiceBase
     {
         return Task.FromResult(new GetItemResponse(){ItemId = request.ItemId});
     }
+
+    public override Task<GetItemResponse> GetItemRouting(GetItemRequest request, ServerCallContext context)
+    {
+        return Task.FromResult(new GetItemResponse(){ItemId = request.ItemId});
+    }
+
+    public override Task<GetItemResponse> PostItem(GetItemRequest request, ServerCallContext context)
+    {
+        return Task.FromResult(new GetItemResponse(){ItemId = request.ItemId});
+    }
 }

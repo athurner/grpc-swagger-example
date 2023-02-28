@@ -10,6 +10,19 @@ service GrpcService {
       get: "/Service/GetItem"
     };
   };
+
+  rpc GetItemRouting(GetItemRequest) returns (GetItemResponse){
+    option (google.api.http) = {
+      get: "/Service/GetItem/{item_id}"
+    };
+  };
+
+  rpc PostItem(GetItemRequest) returns (GetItemResponse){
+    option (google.api.http) = {
+      post: "/Service/PostItem",
+      body: "*"
+    };
+  };
 }
 
 message GetItemRequest {
