@@ -1,8 +1,11 @@
-### Sample GetItem
-GET http://localhost:5045/Service/GetItem?item_id=test HTTP/1.1
+### Sample GetItem (WORKING)
+GET http://localhost:5045/Service/GetItem?item_id=test_working HTTP/1.1
+
+### Sample GetItem (FAILING)
+GET http://localhost:5045/Service/GetItem?itemId=test_failing HTTP/1.1
 
 ### Sample GetItemRouting
-GET http://localhost:5045/Service/GetItem/test2 HTTP/1.1
+GET http://localhost:5045/Service/GetItem/test2_working HTTP/1.1
 
 ### Sample Post
 POST http://localhost:5045/Service/PostItem HTTP/1.1
